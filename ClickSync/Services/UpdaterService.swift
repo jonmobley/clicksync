@@ -16,11 +16,12 @@ final class UpdaterService: ObservableObject {
 			updaterDelegate: nil,
 			userDriverDelegate: nil
 		)
-		updaterController.updater.automaticallyChecksForUpdates = false
-		updaterController.updater.automaticallyDownloadsUpdates = false
+		updaterController.updater.automaticallyChecksForUpdates = true
+		// Enable automatic downloads so Sparkle can install silently.
+		updaterController.updater.automaticallyDownloadsUpdates = true
 	}
 
 	func checkForUpdates() {
-		updaterController.checkForUpdates(nil)
+		updaterController.updater.checkForUpdatesInBackground()
 	}
 }
