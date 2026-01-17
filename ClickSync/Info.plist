@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSUIElement</key>
+	<true/>
+	<!-- Sparkle: appcast URL (replace with your GitHub Releases appcast.xml URL) -->
+	<key>SUFeedURL</key>
+	<string>https://github.com/ORG/REPO/releases/latest/download/appcast.xml</string>
+	<!-- Sparkle: public Ed25519 key (replace with your Sparkle public key) -->
+	<key>SUPublicEDKey</key>
+	<string>rcqO6CngHNG6dgRxfHTAJqHKeaJ9CLGkADBpqT2eStc=</string>
+	<!-- Sparkle: keep automatic checks off (manual checks only for now) -->
+	<key>SUEnableAutomaticChecks</key>
+	<false/>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>ClickSync needs local network access to sync slide controls.</string>
+</dict>
+</plist>

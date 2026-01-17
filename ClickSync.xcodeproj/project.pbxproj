@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		200000000000000000000001 /* ClickSyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000001 /* ClickSyncApp.swift */; };
+		200000000000000000000002 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000002 /* AppState.swift */; };
+		200000000000000000000003 /* AppRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000004 /* AppRole.swift */; };
+		200000000000000000000004 /* SlideCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000005 /* SlideCommand.swift */; };
+		200000000000000000000005 /* ConnectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000006 /* ConnectionStatus.swift */; };
+		200000000000000000000006 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000008 /* SettingsStore.swift */; };
+		200000000000000000000007 /* DebugLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000009 /* DebugLogger.swift */; };
+		200000000000000000000008 /* AccessibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000000A /* AccessibilityService.swift */; };
+		200000000000000000000009 /* AppLifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000000B /* AppLifecycle.swift */; };
+		20000000000000000000000A /* InputMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000000D /* InputMonitor.swift */; };
+		20000000000000000000000B /* KeySender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000000000000000000000E /* KeySender.swift */; };
+		20000000000000000000000C /* SyncMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000010 /* SyncMessage.swift */; };
+		20000000000000000000000D /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000011 /* ConnectionManager.swift */; };
+		20000000000000000000000E /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000013 /* MenuBarView.swift */; };
+		20000000000000000000000F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000015 /* Assets.xcassets */; };
+		200000000000000000000010 /* DiscoveredPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000016 /* DiscoveredPeer.swift */; };
+		200000000000000000000011 /* PresentationAppChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000017 /* PresentationAppChecker.swift */; };
+		200000000000000000000012 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000018 /* LaunchAtLoginManager.swift */; };
+		200000000000000000000013 /* UpdaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000019 /* UpdaterService.swift */; };
+		200000000000000000000014 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 10000000000000000000001B /* Sparkle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		100000000000000000000001 /* ClickSyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickSyncApp.swift; sourceTree = "<group>"; };
+		100000000000000000000002 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		100000000000000000000004 /* AppRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRole.swift; sourceTree = "<group>"; };
+		100000000000000000000005 /* SlideCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCommand.swift; sourceTree = "<group>"; };
+		100000000000000000000006 /* ConnectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStatus.swift; sourceTree = "<group>"; };
+		100000000000000000000008 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		100000000000000000000009 /* DebugLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogger.swift; sourceTree = "<group>"; };
+		10000000000000000000000A /* AccessibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityService.swift; sourceTree = "<group>"; };
+		10000000000000000000000B /* AppLifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycle.swift; sourceTree = "<group>"; };
+		10000000000000000000000D /* InputMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMonitor.swift; sourceTree = "<group>"; };
+		10000000000000000000000E /* KeySender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySender.swift; sourceTree = "<group>"; };
+		100000000000000000000010 /* SyncMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncMessage.swift; sourceTree = "<group>"; };
+		100000000000000000000011 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		100000000000000000000013 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		100000000000000000000014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100000000000000000000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100000000000000000000016 /* DiscoveredPeer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredPeer.swift; sourceTree = "<group>"; };
+		100000000000000000000017 /* PresentationAppChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAppChecker.swift; sourceTree = "<group>"; };
+		100000000000000000000018 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+		100000000000000000000019 /* UpdaterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterService.swift; sourceTree = "<group>"; };
+		F1F1F1F1F1F1F1F1F1F1F1F1 /* ClickSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = ClickSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1E1E1E1E1E1E1E1E1E1E1E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				200000000000000000000014 /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		222222222222222222222222 = {
+			isa = PBXGroup;
+			children = (
+				444444444444444444444444 /* ClickSync */,
+				333333333333333333333333 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		333333333333333333333333 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1F1F1F1F1F1F1F1F1F1F1F1 /* ClickSync.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		444444444444444444444444 /* ClickSync */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000001 /* ClickSyncApp.swift */,
+				100000000000000000000002 /* AppState.swift */,
+				555555555555555555555555 /* Models */,
+				666666666666666666666666 /* Services */,
+				777777777777777777777777 /* Input */,
+				888888888888888888888888 /* Networking */,
+				999999999999999999999999 /* UI */,
+				100000000000000000000014 /* Info.plist */,
+				100000000000000000000015 /* Assets.xcassets */,
+			);
+			path = ClickSync;
+			sourceTree = "<group>";
+		};
+		555555555555555555555555 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000004 /* AppRole.swift */,
+				100000000000000000000005 /* SlideCommand.swift */,
+				100000000000000000000006 /* ConnectionStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		666666666666666666666666 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000008 /* SettingsStore.swift */,
+				100000000000000000000009 /* DebugLogger.swift */,
+				10000000000000000000000A /* AccessibilityService.swift */,
+				10000000000000000000000B /* AppLifecycle.swift */,
+				100000000000000000000017 /* PresentationAppChecker.swift */,
+				100000000000000000000018 /* LaunchAtLoginManager.swift */,
+				100000000000000000000019 /* UpdaterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		777777777777777777777777 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				10000000000000000000000D /* InputMonitor.swift */,
+				10000000000000000000000E /* KeySender.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		888888888888888888888888 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000010 /* SyncMessage.swift */,
+				100000000000000000000011 /* ConnectionManager.swift */,
+				100000000000000000000016 /* DiscoveredPeer.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		999999999999999999999999 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000013 /* MenuBarView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0B0B0B0B0B0B0B0B0B0B0B0 /* ClickSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0F0F0F0F0F0F0F0F0F0F0F0 /* Build configuration list for PBXNativeTarget "ClickSync" */;
+			buildPhases = (
+				C1C1C1C1C1C1C1C1C1C1C1C1 /* Sources */,
+				D1D1D1D1D1D1D1D1D1D1D1D1 /* Resources */,
+				E1E1E1E1E1E1E1E1E1E1E1E1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClickSync;
+			packageProductDependencies = (
+				10000000000000000000001B /* Sparkle */,
+			);
+			productName = ClickSync;
+			productReference = F1F1F1F1F1F1F1F1F1F1F1F1 /* ClickSync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0A0A0A0A0A0A0A0A0A0A0A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					B0B0B0B0B0B0B0B0B0B0B0B0 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = C0C0C0C0C0C0C0C0C0C0C0C0 /* Build configuration list for PBXProject "ClickSync" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 222222222222222222222222;
+			packageReferences = (
+				10000000000000000000001A /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			productRefGroup = 333333333333333333333333 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0B0B0B0B0B0B0B0B0B0B0B0 /* ClickSync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1D1D1D1D1D1D1D1D1D1D1D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20000000000000000000000F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1C1C1C1C1C1C1C1C1C1C1C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				200000000000000000000001 /* ClickSyncApp.swift in Sources */,
+				200000000000000000000002 /* AppState.swift in Sources */,
+				200000000000000000000003 /* AppRole.swift in Sources */,
+				200000000000000000000004 /* SlideCommand.swift in Sources */,
+				200000000000000000000005 /* ConnectionStatus.swift in Sources */,
+				200000000000000000000006 /* SettingsStore.swift in Sources */,
+				200000000000000000000007 /* DebugLogger.swift in Sources */,
+				200000000000000000000008 /* AccessibilityService.swift in Sources */,
+				200000000000000000000009 /* AppLifecycle.swift in Sources */,
+				20000000000000000000000A /* InputMonitor.swift in Sources */,
+				20000000000000000000000B /* KeySender.swift in Sources */,
+				20000000000000000000000C /* SyncMessage.swift in Sources */,
+				20000000000000000000000D /* ConnectionManager.swift in Sources */,
+				20000000000000000000000E /* MenuBarView.swift in Sources */,
+				200000000000000000000010 /* DiscoveredPeer.swift in Sources */,
+				200000000000000000000011 /* PresentationAppChecker.swift in Sources */,
+				200000000000000000000012 /* LaunchAtLoginManager.swift in Sources */,
+				200000000000000000000013 /* UpdaterService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A1A1A1A1A1A1A1A1A1A1A1A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ClickSync/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobleypro.ClickSync;
+				PRODUCT_NAME = ClickSync;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		B1B1B1B1B1B1B1B1B1B1B1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ClickSync/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobleypro.ClickSync;
+				PRODUCT_NAME = ClickSync;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		D0D0D0D0D0D0D0D0D0D0D0D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2YBTPD32DW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ClickSync/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ClickSync;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		E0E0E0E0E0E0E0E0E0E0E0E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2YBTPD32DW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ClickSync/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = ClickSync;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0C0C0C0C0C0C0C0C0C0C0C0 /* Build configuration list for PBXProject "ClickSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D0D0D0D0D0D0D0D0D0D0D0 /* Debug */,
+				E0E0E0E0E0E0E0E0E0E0E0E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0F0F0F0F0F0F0F0F0F0F0F0 /* Build configuration list for PBXNativeTarget "ClickSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A1A1A1A1A1A1A1A1A1A1A1 /* Debug */,
+				B1B1B1B1B1B1B1B1B1B1B1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10000000000000000000001A /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10000000000000000000001B /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10000000000000000000001A /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A0A0A0A0A0A0A0A0A0A0A0A0 /* Project object */;
+}
