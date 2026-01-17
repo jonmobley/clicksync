@@ -17,6 +17,10 @@ final class ConnectionManager {
 	private var preferredPeerName: String?
 	private var discoveredPeers: [DiscoveredPeer] = []
 	private var connectedPeerName: String?
+	private var heartbeatTimer: DispatchSourceTimer?
+	private var lastHeartbeatReceived = Date()
+	private let heartbeatInterval: TimeInterval = 5
+	private let heartbeatTimeout: TimeInterval = 12
 
 	var onStatusChange: ((ConnectionStatus) -> Void)?
 	var onCommandReceived: ((SlideCommand) -> Void)?
@@ -44,6 +48,7 @@ final class ConnectionManager {
 		browser = nil
 		connection?.cancel()
 		connection = nil
+		stopHeartbeatMonitoring()
 		setConnectedPeerName(nil)
 		receiveBuffer.removeAll()
 		notifyPeers([])
@@ -112,14 +117,18 @@ final class ConnectionManager {
 		case .ready:
 			setStatus(.connected)
 			notifyConnectedPeer()
+			startHeartbeatMonitoring()
 			receiveNext()
 		case .waiting:
 			setStatus(.connecting)
+			stopHeartbeatMonitoring()
 		case .failed(let error):
 			setStatus(.failed(error.localizedDescription))
+			stopHeartbeatMonitoring()
 			scheduleReconnectIfNeeded()
 		case .cancelled:
 			setStatus(.disconnected)
+			stopHeartbeatMonitoring()
 			setConnectedPeerName(nil)
 		default:
 			break
@@ -153,12 +162,55 @@ final class ConnectionManager {
 
 	private func handleLine(_ line: String) {
 		guard let message = SyncMessage(rawValue: line) else { return }
-		onCommandReceived?(message.command)
+		switch message {
+		case .ping:
+			handleHeartbeatResponse()
+			send(message: .pong)
+		case .pong:
+			handleHeartbeatResponse()
+		case .next, .previous:
+			handleHeartbeatResponse()
+			if let command = message.commandOrNil() {
+				onCommandReceived?(command)
+			}
+		}
+	}
+
+	private func handleHeartbeatResponse() {
+		lastHeartbeatReceived = Date()
 	}
 
 	private func send(payload: Data) {
 		guard let connection = connection else { return }
 		connection.send(content: payload, completion: .contentProcessed { _ in })
+	}
+
+	private func send(message: SyncMessage) {
+		send(payload: message.payload)
+	}
+
+	private func startHeartbeatMonitoring() {
+		stopHeartbeatMonitoring()
+		lastHeartbeatReceived = Date()
+		let timer = DispatchSource.makeTimerSource(queue: queue)
+		timer.schedule(deadline: .now() + heartbeatInterval, repeating: heartbeatInterval)
+		timer.setEventHandler { [weak self] in
+			self?.send(message: .ping)
+			self?.validateHeartbeat()
+		}
+		heartbeatTimer = timer
+		timer.resume()
+	}
+
+	private func stopHeartbeatMonitoring() {
+		heartbeatTimer?.cancel()
+		heartbeatTimer = nil
+	}
+
+	private func validateHeartbeat() {
+		let elapsed = Date().timeIntervalSince(lastHeartbeatReceived)
+		guard elapsed > heartbeatTimeout else { return }
+		connection?.cancel()
 	}
 
 	private func scheduleReconnectIfNeeded() {

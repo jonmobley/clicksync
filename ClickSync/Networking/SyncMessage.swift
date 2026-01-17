@@ -4,6 +4,8 @@ import Foundation
 enum SyncMessage: String {
 	case next = "NEXT"
 	case previous = "PREV"
+	case ping = "PING"
+	case pong = "PONG"
 
 	init?(command: SlideCommand) {
 		switch command {
@@ -14,12 +16,14 @@ enum SyncMessage: String {
 		}
 	}
 
-	var command: SlideCommand {
+	func commandOrNil() -> SlideCommand? {
 		switch self {
 		case .next:
 			return .next
 		case .previous:
 			return .previous
+		case .ping, .pong:
+			return nil
 		}
 	}
 
