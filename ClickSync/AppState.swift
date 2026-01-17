@@ -132,8 +132,9 @@ final class AppState: ObservableObject {
 	}
 
 	private func executeCommand(_ command: SlideCommand) {
-		guard presentationChecker.isPresentationAppActive() else {
-			logger.log("Ignored command: no presentation app active.")
+		if !presentationChecker.isPresentationAppActive(),
+		   !presentationChecker.isPresentationAppRunning() {
+			logger.log("Ignored command: no presentation app active or running.")
 			return
 		}
 		logger.log("Executing \(command.rawValue)")

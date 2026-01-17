@@ -15,4 +15,12 @@ final class PresentationAppChecker {
 		}
 		return allowedBundleIDs.contains(bundleID)
 	}
+
+	func isPresentationAppRunning() -> Bool {
+		let runningApps = NSWorkspace.shared.runningApplications
+		return runningApps.contains { app in
+			guard let bundleID = app.bundleIdentifier else { return false }
+			return allowedBundleIDs.contains(bundleID)
+		}
+	}
 }
