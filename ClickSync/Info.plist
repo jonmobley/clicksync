@@ -22,7 +22,7 @@
 	<true/>
 	<!-- Sparkle: appcast URL (replace with your GitHub Releases appcast.xml URL) -->
 	<key>SUFeedURL</key>
-	<string>https://github.com/ORG/REPO/releases/latest/download/appcast.xml</string>
+	<string>https://github.com/jonmobley/clicksync/releases/latest/download/appcast.xml</string>
 	<!-- Sparkle: public Ed25519 key (replace with your Sparkle public key) -->
 	<key>SUPublicEDKey</key>
 	<string>rcqO6CngHNG6dgRxfHTAJqHKeaJ9CLGkADBpqT2eStc=</string>
